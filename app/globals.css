@@ -1,26 +1,13 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
-}
+/* Tailwind resets the default styles, so we add back the basics */
+body { font-family: system-ui, sans-serif; margin: 0; background: #f6f3ec; color: #3b2a37; }
+nav { display: flex; gap: 16px; align-items: center; padding: 14px 24px; background: #76516b; color: #f6f3ec; }
+nav a { color: #f6f3ec; text-decoration: underline; }
+main { padding: 24px; max-width: 700px; }
+h1 { font-size: 1.75rem; font-weight: 700; margin-bottom: 12px; }
+ul { list-style: disc; padding-left: 24px; }
+li { margin: 8px 0; }
+input { padding: 6px; margin-right: 8px; border: 1px solid #76516b; border-radius: 4px; background: white; }
+button { padding: 6px 12px; cursor: pointer; background: #76516b; color: #f6f3ec; border-radius: 4px; }
+button:disabled { opacity: 0.6; cursor: not-allowed; }
